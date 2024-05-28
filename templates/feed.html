@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Social Feed</h1>
+    <ul>
+        {% for post in posts %}
+            <li>
+                <h2>{{ post.title }}</h2>
+                <p>{{ post.content }}</p>
+                <button>Like</button>
+                <button>Comment</button>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
